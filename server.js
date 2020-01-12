@@ -40,5 +40,11 @@ function start() {
          else if(answer.options === "View employee") {
              viewEmployee();
          }
+         else if(answer.options === "Update employee role") {
+             updateRole();
+         }
+         else if(answer.option === "Exit") {
+             exit();
+         }
      })
 }
