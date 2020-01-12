@@ -13,7 +13,9 @@ CREATE TABLE role (
   id INT NOT NULL AUTO_INCREMENT,
   title VARCHAR(30) NULL,
   salary Decimal(10,4) NULL,
-  PRIMARY KEY (id)
+  department_id INT,
+  PRIMARY KEY (id),
+  CONSTRAINT FK_department FOREIGN KEY (department_id) REFERENCES department(id)
 );
 
 CREATE TABLE employee (
@@ -24,3 +26,14 @@ CREATE TABLE employee (
   manager_id INT NULL,
   PRIMARY KEY (id)
 );
+
+
+-- W3 Schools 
+-- CREATE TABLE Orders (
+--     OrderID int NOT NULL,
+--     OrderNumber int NOT NULL,
+--     PersonID int,
+--     PRIMARY KEY (OrderID),
+--     CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID)
+--     REFERENCES Persons(PersonID)
+-- );
